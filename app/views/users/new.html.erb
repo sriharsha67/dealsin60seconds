@@ -1,0 +1,20 @@
+<div class="container  text-center">
+  <div class="row">
+    <div class="vcenter">
+      <h1>Most Exclusive Website</h1>
+      <h3>One visitor at a time, every sixty seconds. Get your ticket.</h3>
+      <p>If you disconnect or close this webpage you will lose your spot in line.</p>
+      <h1>There are <%= User.count %> people in Queue</h1>
+      
+      <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+          <%= simple_form_for @user do |f| %>
+          <%= f.input :name, label: false, placeholder: 'Please Enter Your Name' %>
+          <%= f.input :email, label: false, placeholder: 'Please Enter Your Email' %>
+          <%= f.submit "Get Ticket", class: "btn btn-primary btn-lg" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
